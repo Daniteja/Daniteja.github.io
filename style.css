@@ -53,13 +53,11 @@ nav a:hover {
     transform: scale(1.02);
 }
 
-/* Headings */
 h1, h2 {
     text-align: center;
     font-weight: 600;
 }
 
-/* Profile Image */
 img {
     display: block;
     margin: 0 auto 15px auto;
@@ -68,7 +66,7 @@ img {
     border: 4px solid white;
 }
 
-/* SMOOTH SCROLL */
+/* Smooth Scroll */
 html {
     scroll-behavior: smooth;
 }
@@ -97,7 +95,7 @@ html {
     border-color: #222;
 }
 
-/* Dark Mode Toggle Button */
+/* Dark Mode button */
 .toggle-btn {
     position: fixed;
     right: 20px;
