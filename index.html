@@ -20,8 +20,6 @@ function toggleDark() {
     <a href="#contact">Contact</a>
 </nav>
 
-    <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
-
     <div class="card" id="home">
         <img src="profile.jpg" alt="Profile Photo" class="profile">
         <h1>Hello, I'm <span class="highlight">Danish NS</span></h1>
@@ -56,6 +54,11 @@ function toggleDark() {
             <h2>Contact</h2>
             <p>Email: danishns007@email.com</p>
         </div>
-
+        <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
+<script>
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+</script>
 </body>
 </html>
