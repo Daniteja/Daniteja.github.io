@@ -50,3 +50,34 @@ body {
 .menu a:hover {
     opacity: 0.8;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1e1e1e;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    background: #1e90ff;
+    color: white;
+}
