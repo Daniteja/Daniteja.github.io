@@ -1,115 +1,108 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Retro Futuristic Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
 
 body {
-    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background: #f0f2f5;
+    font-family: "Orbitron", sans-serif;
+    background: linear-gradient(135deg, #0a0f24, #1c2340, #0a0f24);
+    background-size: 400% 400%;
+    animation: bgMove 12s infinite alternate;
+    color: #00eaff;
     transition: 0.4s;
 }
 
-/* NAVBAR */
+/* Moving Background */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Retro Neon Navbar */
 nav {
-    background: white;
-    padding: 15px 0;
-    text-align: center;
-    position: fixed;
     width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 100;
+    padding: 18px 0;
+    text-align: center;
+    background: rgba(10, 15, 36, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #00eaff;
+    box-shadow: 0 0 25px #00eaff;
+    z-index: 1000;
 }
 
 nav a {
+    margin: 0 18px;
     text-decoration: none;
-    color: black;
-    font-weight: 600;
-    margin: 0 20px;
     font-size: 18px;
-    transition: 0.3s;
+    font-weight: 600;
+    color: #00eaff;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
-    color: #007bff;
+    color: #ff0099;
+    text-shadow: 0 0 10px #ff0099, 0 0 20px #ff0099;
     transform: scale(1.1);
 }
 
-/* GLASS EFFECT CARD */
+/* Neon Glowing Card */
 .container {
     max-width: 650px;
-    margin: 130px auto;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
+    margin: 140px auto;
+    background: rgba(10, 15, 36, 0.7);
     padding: 35px;
-    border-radius: 16px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    transition: 0.3s;
+    border-radius: 20px;
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 25px #00eaff;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: 0.3s ease;
 }
 
-/* Smooth Hover Lift */
 .container:hover {
-    transform: scale(1.02);
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px #00eaff;
 }
 
 h1, h2 {
-    text-align: center;
-    font-weight: 600;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
 }
 
+/* Neon Profile Image */
 img {
-    display: block;
-    margin: 0 auto 15px auto;
-    max-width: 130px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    border: 4px solid white;
+    border: 4px solid #00eaff;
+    box-shadow: 0 0 25px #00eaff;
+    margin-bottom: 15px;
 }
 
-/* Smooth Scroll */
+/* Retro buttons */
+button, .btn {
+    background: #ff0099;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff0099;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #ff4dc4;
+    box-shadow: 0 0 30px #ff0099;
+    transform: scale(1.1);
+}
+
+/* Smooth scroll */
 html {
     scroll-behavior: smooth;
-}
-
-/* DARK MODE */
-.dark {
-    background: #0f0f0f;
-    color: white;
-}
-
-.dark nav {
-    background: #181818;
-    box-shadow: 0 2px 10px rgba(255,255,255,0.1);
-}
-
-.dark nav a {
-    color: white;
-}
-
-.dark .container {
-    background: rgba(30, 30, 30, 0.6);
-    box-shadow: 0 8px 25px rgba(255,255,255,0.1);
-}
-
-.dark img {
-    border-color: #222;
-}
-
-/* Dark Mode button */
-.toggle-btn {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: black;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 600;
-    border: none;
-    transition: 0.3s;
-}
-
-.toggle-btn:hover {
-    transform: scale(1.1);
 }
