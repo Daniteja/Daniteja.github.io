@@ -6,14 +6,21 @@
     <title>My Introduction</title>
     <link rel="stylesheet" href="style.css">
 </head>
+    <script>
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+</script>
 <body>
-<nav>
+    <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
 </nav>
+
+    <button class="toggle-btn" onclick="toggleDark()">Dark Mode</button>
 
     <div class="card" id="home">
         <img src="profile.jpg" alt="Profile Photo" class="profile">
@@ -49,7 +56,6 @@
             <h2>Contact</h2>
             <p>Email: danishns007@email.com</p>
         </div>
-    </div>
 
 </body>
 </html>
