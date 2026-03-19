@@ -1,53 +1,117 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: #f0f2f5;
+    transition: 0.4s;
 }
 
-/* Navigation Bar */
+/* NAVBAR */
 nav {
     background: white;
     padding: 15px 0;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
 }
 
 nav a {
     text-decoration: none;
     color: black;
-    font-weight: bold;
+    font-weight: 600;
     margin: 0 20px;
     font-size: 18px;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #007bff;
+    transform: scale(1.1);
 }
 
-/* Center Card */
+/* GLASS EFFECT CARD */
 .container {
-    max-width: 600px;
-    margin: 120px auto;   /* Push below navbar + center */
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 650px;
+    margin: 130px auto;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+/* Smooth Hover Lift */
+.container:hover {
+    transform: scale(1.02);
 }
 
 /* Headings */
 h1, h2 {
     text-align: center;
+    font-weight: 600;
 }
 
 /* Profile Image */
 img {
     display: block;
     margin: 0 auto 15px auto;
-    max-width: 120px;
+    max-width: 130px;
     border-radius: 50%;
+    border: 4px solid white;
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+
+/* DARK MODE */
+.dark {
+    background: #0f0f0f;
+    color: white;
+}
+
+.dark nav {
+    background: #181818;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+}
+
+.dark nav a {
+    color: white;
+}
+
+.dark .container {
+    background: rgba(30, 30, 30, 0.6);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.1);
+}
+
+.dark img {
+    border-color: #222;
+}
+
+/* Dark Mode Toggle Button */
+.toggle-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.1);
 }
